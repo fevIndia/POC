@@ -1,0 +1,17 @@
+bootstrap_servers = "kafka.amazonaws.com:9094"
+instance_type     = "kafka.t3.small"
+client_subnets    = ["subnet-0a161134b287d3aa8", "subnet-0ae6b4abcd15204a4"] 
+security_groups   = ["sg-0ae070c4d6a39ce4f"]  
+ca_cert_path      = "./certs/ca.pem"
+client_cert_path  = "./certs/client.pem"
+client_key_path   = "./certs/client.key"
+aws_access_key    = "AKIASVQKHPZFOAKO3GWT"
+aws_secret_key    = "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"
+region             = "us-east-1"
+db_name            = "myapp"
+engine             = "postgres"
+instance_class     = "db.t3.micro"
+allocated_storage  = 20
+db_user            = "myappuser"
+db_password        = "FevIndia"  # No invalid characters
+identifier         = "myapprds"

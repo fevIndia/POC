@@ -1,0 +1,12 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Alert
+metadata:
+ name: notify-on-failure2
+ namespace: team-fluxcicd
+spec:
+ providerRef:
+   name: rocketchat3
+ eventSeverity: error
+ eventSources:
+   - kind: Kustomization
+     name: '*'

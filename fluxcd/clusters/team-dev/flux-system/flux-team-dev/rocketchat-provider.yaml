@@ -1,0 +1,9 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Provider
+metadata:
+ name: rocketchat3
+ namespace: team-fluxcicd
+spec:
+ type: rocket
+ channel: "#fluxalert"
+ address: http://192.168.237.233:3000/hooks/67fcfc578458cd411d8ef7be/SiWvnrW5WaCEXyuZtsM4esvBCq6wxCeT5BhZMkZxy3fbyAni
