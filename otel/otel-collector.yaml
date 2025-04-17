@@ -35,7 +35,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: otel-collector
-  namespace: observability
 spec:
   replicas: 1
   selector:

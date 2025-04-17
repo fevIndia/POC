@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: otel-demo
+  labels:
+    app: otel-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: otel-demo
+  template:
+    metadata:
+      labels:
+        app: otel-demo
+    spec:
+      containers:
+        - name: otel-demo
+          image: honeycombio/opentelemetry-example-app:latest
+          imagePullPolicy: Always
+          env:
+            - name: OTEL_EXPORTER_OTLP_ENDPOINT
+              value: "http://otel-collector:4318"
+            - name: OTEL_EXPORTER_OTLP_PROTOCOL
+              value: "http/protobuf"
+            - name: OTEL_SERVICE_NAME
+              value: "otel-demo"
+          ports:
+            - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: otel-demo
+spec:
+  selector:
+    app: otel-demo
+  ports:
+    - name: http
+      port: 3000
+      targetPort: 3000
+
