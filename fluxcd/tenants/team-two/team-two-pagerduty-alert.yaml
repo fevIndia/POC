@@ -1,12 +1,12 @@
 apiVersion: notification.toolkit.fluxcd.io/v1beta3
 kind: Alert
 metadata:
-  name: team-dev-alert
-  namespace: team-fluxcicd
+  name: pagerduty-team-two-alert
+  namespace: team-two-webapp
 spec:
   providerRef:
-    name: pagerduty3
+    name: team-two-pagerduty
   eventSeverity: error
   eventSources:
     - kind: Kustomization
-      name: team-dev-apps
+      name: team-two

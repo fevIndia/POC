@@ -1,0 +1,14 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: team-two
+  namespace: team-two-webapp
+spec:
+  interval: 1m0s
+  path: ./
+  prune: false
+  serviceAccountName: team-two
+  sourceRef:
+    kind: GitRepository
+    name: team-two

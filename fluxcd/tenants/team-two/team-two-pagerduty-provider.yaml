@@ -1,11 +1,11 @@
 apiVersion: notification.toolkit.fluxcd.io/v1beta3
 kind: Provider
 metadata:
-  name: pagerduty3
-  namespace: team-fluxcicd
+  name: team-two-pagerduty
+  namespace: team-two-webapp
 spec:
   type: pagerduty
   address: https://events.pagerduty.com/v2/enqueue
-  channel: 7823f1f0af5a4c0dc00fc6b8b3f7d0ec
+  channel: ad1e1b04a5264506c071008031e1f38f
   # secretRef:
   #   name: pagerduty-secret

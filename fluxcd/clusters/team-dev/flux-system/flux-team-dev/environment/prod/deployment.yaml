@@ -1,2 +1,0 @@
-resources:
-  - non-existent.yaml  # <- This file doesn't exist
