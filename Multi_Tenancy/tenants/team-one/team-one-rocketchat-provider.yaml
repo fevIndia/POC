@@ -1,0 +1,9 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Provider
+metadata:
+ name: team-one-rocketchat
+ namespace: team-one-webapp
+spec:
+ type: rocket
+ channel: "#team-one"
+ address: http://10.80.3.54:3000/hooks/6809ea95238490d4fdaef1be/MuZMRQdizT2NEg22Wk8DNmSRHBvbWYfF2sDDqLt4wcB5gWCm
